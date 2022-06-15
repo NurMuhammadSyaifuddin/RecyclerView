@@ -99,6 +99,7 @@ data class PresidentModel(
 ```
 
 #### Download gambar presiden dari RecyclerView/app/src/main/res/drawable-v24/, lalu drag&drop ke file drawable
+![image](https://user-images.githubusercontent.com/68520848/173883782-5bcbb10c-754b-412a-98a9-52b5111b8b43.png)
 
 #### Buat layout resource file baru dengan nama item_list_president.xml, kemudian ubah kode didalamnya
 ``` Ruby
