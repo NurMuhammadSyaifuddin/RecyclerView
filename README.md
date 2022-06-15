@@ -1,6 +1,6 @@
 # RecyclerView
 
-## Buat Data Class yang menampung data President
+#### Buat Data Class yang menampung data President
 ``` Ruby
 @Parcelize
 data class PresidentModel(
@@ -8,5 +8,30 @@ data class PresidentModel(
     val name: String,
     val desc: String
 ): Parcelable
-end
+```
+
+#### Ubah kode pada layout activity_main
+``` Ruby
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_presidents"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/dp_8"
+        android:clipToPadding="false"
+        tools:listitem="@layout/item_list_president"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 ```
