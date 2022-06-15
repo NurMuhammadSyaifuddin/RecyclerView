@@ -97,3 +97,45 @@ data class PresidentModel(
 
 </androidx.core.widget.NestedScrollView>
 ```
+
+#### Download gambar presiden dari RecyclerView/app/src/main/res/drawable-v24/, lalu drag&drop ke file drawable
+
+#### Buat layout resource file baru dengan nama item_list_president.xml, kemudian ubah kode didalamnya
+``` Ruby
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/dp_8">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_poster"
+        android:layout_width="@dimen/dp_84"
+        android:layout_height="@dimen/dp_84"
+        android:scaleType="centerCrop"
+        android:src="@android:color/darker_gray"
+        android:layout_marginBottom="@dimen/dp_8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        tools:text="Nur Muhammad Syaifuddin"
+        android:layout_marginStart="@dimen/dp_32"
+        android:layout_marginEnd="@dimen/dp_32"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintTop_toTopOf="@id/img_poster"
+        app:layout_constraintStart_toEndOf="@id/img_poster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/img_poster"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
