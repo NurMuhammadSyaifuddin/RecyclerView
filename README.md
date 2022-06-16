@@ -3,6 +3,31 @@
 ## Demo
 https://user-images.githubusercontent.com/68520848/173992527-5a9252cc-bace-4378-af8b-d54368b22a54.mp4
 
+#### Buka build.gradle level module (app), tambahkan plugin kotlinx-parcelize
+``` Ruby
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+}
+```
+
+#### Tambahkan View Binding di dalam scope android
+``` Ruby
+    buildFeatures {
+        viewBinding true
+    }
+```
+
+#### Tambahkan library Glide dan Circle Image di dalam scope dependencies
+``` Ruby
+    // Circle Image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+```
+
 #### Buat Data Class yang menampung data President
 ``` Ruby
 @Parcelize
