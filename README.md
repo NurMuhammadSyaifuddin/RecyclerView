@@ -12,7 +12,7 @@ plugins {
 }
 ```
 
-#### Tambahkan View Binding di dalam scope android
+#### Tambahkan View Binding pada build.gradle level module (app) dalam scope android
 ``` Ruby
     buildFeatures {
         viewBinding true
