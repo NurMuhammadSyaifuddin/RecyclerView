@@ -14,18 +14,18 @@ plugins {
 
 #### Tambahkan View Binding pada build.gradle level module (app) dalam scope android
 ``` Ruby
-    buildFeatures {
-        viewBinding true
-    }
+buildFeatures {
+    viewBinding true
+}
 ```
 
 #### Tambahkan library Glide dan Circle Image di dalam scope dependencies
 ``` Ruby
-    // Circle Image
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
+// Circle Image
+implementation 'de.hdodenhof:circleimageview:3.1.0'
 
-    // Glide
-    implementation 'com.github.bumptech.glide:glide:4.13.0'
+// Glide
+implementation 'com.github.bumptech.glide:glide:4.13.0'
 ```
 
 #### Buat Data Class yang menampung data President
